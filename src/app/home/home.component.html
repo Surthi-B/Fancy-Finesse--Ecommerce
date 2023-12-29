@@ -1,0 +1,26 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<ul>
+    <li *ngFor="let fancy of fancys" >
+        <a routerLink="/fancy/{{fancy.id}}">
+            <img src="{{fancy.imageUrl}}" alt="">
+            <div class="content">
+                <div class="name">{{fancy.name}}</div>
+                   <div class ="product-item-footer">
+                
+            
+                    <div class="DeliveryTime">
+                        <span>🕒</span>
+                        {{fancy.DeliveryTime}}
+                        
+                    </div>
+                
+                <div class="price">
+                    <span>{{fancy.price|currency}}</span>
+                    </div>
+                  </div>   
+                </div>
+            </a>
+        </li>
+    </ul>
+

@@ -1,0 +1,26 @@
+<div *ngIf="fancy" class="container">
+    <img [src]="fancy.imageUrl" [alt]="fancy.name" />
+  
+    <div class="details">
+      <div class="header">
+        <span class="name">
+          {{ fancy.name }}
+        </span>
+      </div>
+  
+      <div class="tags">
+        <app-tags [fancyPageTags]="fancy.tags" justifyContent="start"></app-tags>
+      </div>
+  
+      <div class="DeliveryTime">
+        <span>Time to Deliver about <strong>{{ fancy.DeliveryTime }}</strong> days</span>
+      </div>
+  
+      <div class="price">
+        <span>{{ fancy.price | currency }}</span>
+      </div>
+  
+      <button (click)="addToCart()">Add To Cart</button>
+    </div>
+  </div>
+  
